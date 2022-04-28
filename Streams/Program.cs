@@ -20,7 +20,9 @@ namespace StackHeapGC
             //  .Run<ProcessarCsv>(
             //      ManualConfig
             //          .Create(DefaultConfig.Instance)
+            //          .AddJob(Job.ShortRun.WithRuntime(ClrRuntime.Net48))
             //          .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core31))
+            //          .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core60))
             //  );
         }
     }

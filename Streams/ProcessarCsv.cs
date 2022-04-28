@@ -1,9 +1,9 @@
-﻿using BenchmarkDotNet.Attributes;
-using Performance;
-using System;
+﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using BenchmarkDotNet.Attributes;
+using Performance;
 
 namespace Streams
 {
@@ -18,7 +18,6 @@ namespace Streams
         [Benchmark]
         public void ReadAllLines()
         {
-
             var lines = File.ReadAllLines(RatingsPath);
             var sum = 0d;
             var count = 0;
@@ -71,7 +70,7 @@ namespace Streams
         /// Evitando string.Split!
         /// Toda vez que transformo ou modifico uma string, eu crio uma string nova!
         /// Consequentemente a cada split, são geradadas 4 novas strings (4 colunas).
-        /// Vamos utilizar Span! 
+        /// Vamos utilizar Span!
         /// Recurso mais atual que permite trabalhar com subsets de bytes/arrays
         /// sem necessidade de criar strings novas!
         /// </summary>
@@ -91,7 +90,7 @@ namespace Streams
                 {
                     // ignoring the voter id
                     var span = line.AsSpan(line.IndexOf(',') + 1);
-
+                    
                     // movieId
                     var firstCommaPos = span.IndexOf(',');
                     var movieId = span.Slice(0, firstCommaPos);

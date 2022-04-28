@@ -11,8 +11,8 @@
             //explanation.Principal();
 
             //var practice = new YieldReturnPractices();
-            //practice.Principal("index.php", 5, @"C:\Code", ".php");
-            //practice.Principal("index.php", 1, @"C:\Code");
+            //practice.Principal("README.md", 2, @"C:\Code", ".md");
+            //practice.Principal("README.md", 2, @"C:\Code");
         }
     }
 }

@@ -11,17 +11,18 @@ namespace Parallelism
     {
         private static void Main(string[] args)
         {
-            //Benchmark.Run("1.WithoutParallelism", () => new ParallelismStartup().WithoutParallelism(200, 200_000));
-            //Benchmark.Run("2.ThreadsWithLock", () => new ParallelismStartup().ThreadsWithLock(200, 200_000));
-            //Benchmark.Run("3.ThreadsWithoutLock", () => new ParallelismStartup().ThreadsWithoutLock(200, 200_000));
-            //Benchmark.Run("4.ThreadPool", () => new ParallelismStartup().ThreadPool(200, 200_000));
-            //Benchmark.Run("5.TPL", () => new ParallelismStartup().TPL(200, 200_000));
+            //Benchmark.Run("1.WithoutParallelism", () => new ParallelismStartup(200, 200_000).WithoutParallelism());
+            //Benchmark.Run("2.ThreadsWithLock", () => new ParallelismStartup(200, 200_000).ThreadsWithLock());
+            //Benchmark.Run("3.ThreadsWithoutLock", () => new ParallelismStartup(200, 200_000).ThreadsWithoutLock());
+            //Benchmark.Run("4.ThreadPool", () => new ParallelismStartup(200, 200_000).ThreadPool());
+            //Benchmark.Run("5.TPL", () => new ParallelismStartup(200, 200_000).TPL());
 
             //BenchmarkRunner
             //   .Run<ParallelismStartup>(
             //       ManualConfig
             //           .Create(DefaultConfig.Instance)
             //           .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core31))
+            //           .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core60))
             //   );
 
 

@@ -21,13 +21,13 @@ namespace StackHeapGC
             //Benchmark.Run("8.Stackalloc", () => new GCPerformanceStartup(2_000_000).Stackalloc());
             //Benchmark.Run("9.Struct", () => new GCPerformanceStartup(2_000_000).Struct());
 
-
             //BenchmarkRunner
             //    .Run<GCPerformanceStartup>(
             //        ManualConfig
             //            .Create(DefaultConfig.Instance)
             //            .AddJob(Job.ShortRun.WithRuntime(ClrRuntime.Net48))
             //            .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core31))
+            //            .AddJob(Job.ShortRun.WithRuntime(CoreRuntime.Core60))
             //    );
         }
     }
